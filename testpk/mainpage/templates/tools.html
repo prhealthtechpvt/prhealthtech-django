@@ -1,0 +1,51 @@
+{% extends 'mainpage.html' %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <title>{% block title %}Tools{% endblock %}</title>
+</head>
+
+<body>
+  {% block body %}
+  <br><br><br>
+                <div class="container">
+                  <h1>Pharmacokinetic Studies</h1>
+                  <br>
+                  <div class="card" style="width: 18rem;">
+                    <!-- /<img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
+                    <div class="card-body">
+                      <h5 class="card-title">One Compartment Open Model</h5>
+                      <p class="card-text">Perform pharmacokinetic studies under One Compartment Open Model</p>
+                      <a href="{% url 'OCMODEL' %}" class="btn btn-primary">Analyse</a>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {% endblock %}
+</body>
+
+</html>

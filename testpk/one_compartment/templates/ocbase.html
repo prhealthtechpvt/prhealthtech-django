@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %} One Compartment Open Model {% endblock %}</title>
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="{% static 'css/ocmodel.css' %}">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  {% block script %}{% endblock %}
+</head>
+
+<body>
+
+  <div class="banner" id="banner">
+    {% block banner %}
+    <h4>One Compartment Open Model</h4>{% endblock %}
+  </div>
+
+  <nav class="nav-bar">
+        <ul class="nav-bar-ul">
+            <li> <a href="{% url 'IVBOLUS' %}">IV Bolus Plasma</a> </li>
+            <li> <a href="#">IV Bolus UED</a> </li>
+            <li> <a href="#">IV Infusion Plasma</a> </li>
+            <!-- <li> <a href="#">IV Infusion UED</a> </li> -->
+            <li> <a href="#">EV Route Plasma</a> </li>
+            <li> <a href="#">EV Route UED</a> </li>
+            <li> <a href="#">Comparitive Studies</a> </li>
+        </ul>
+    </nav>
+
+    <div class="wrapper">
+        <div class="flex-container">
+            <div class="box one" id="box-one">
+                <div class="main-content">
+                    <div class="data-upload">
+                        <br>
+                        <div class="input-parameters" id="sampleData">
+
+                            <legend>Inputs</legend>
+                            <br><br>
+                            <label for="dose">Dose (mg) </label>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <input type="text" id="dose">
+                            <br><br>
+                            <label for="mec">MEC &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <input type="text" id="min-effect-conc">
+                            <br><br>
+                            <label for="msc">MSC &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <input type="text" id="max-safe-conc">
+                            <br><br>
+                            <input type="file" id="upload" defaultValue="Choose Sample File" accept=".csv">
+                            <br><br><br>
+
+                        </div>
+                    </div>
+                </div>
+
+              </div>
+            <!-- div for IV Bolus -->
+            {% block individual-parameters %}{% endblock %}
+            <!--  div for extravascular route -->
+
+            <!-- div for iv bolus UED  -->
+
+            <!-- div for ev route extravascular -->
+
+            <!-- IV Infusion Parameters -->
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+{% extends 'mainpage.html' %} {% block body %}
+<br><br><br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">IV Bolus Plasma</h5>
+          <p class="card-text">Estimate all possible pharmacokinetic parameters in IV Bolus</p>
+          <br>
+          <a href="{% url 'IVBOLUS' %}" class="btn btn-primary">View</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">IV Bolus Urinary Excretory Data</h5>
+          <p class="card-text">Estimate all possible pharmacokinetic parameters in IV Bolus Urinary Excretory Data</p>
+          <a href="{% url 'IVBOLUSUED' %}" class="btn btn-primary">View</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">IV Infusion Plasma</h5>
+          <p class="card-text">Estimate all possible pharmacokinetic parameters in IV Infusion Plasma</p>
+          <br>
+          <a href="{% url 'IVINFUSION' %}" class="btn btn-primary">View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Extravascular Route Plasma</h5>
+          <p class="card-text">Estimate all possible pharmacokinetic parameters in Extravascular Route Plasma</p>
+          <br>
+          <a href="{% url 'EVROUTE' %}" class="btn btn-primary">View</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Extravascular Route Urinary Excretory Data </h5>
+          <p class="card-text">Estimate all possible pharmacokinetic parameters in Extravascular Route Urinary Excretory Data</p>
+          <a href="{% url 'EVROUTEUED' %}" class="btn btn-primary">View</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Comparitive Studies</h5>
+          <p class="card-text">Compare different routes of administrations</p>
+          <br><br><br>
+          <a href="{% url 'COMPARITIVE' %}" class="btn btn-primary">View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,102 @@
+{% extends 'ocbase.html' %}
+{% load static %}
+
+{% block title %} IV Bolus {% endblock %}
+{% block banner %} One Compartment Open Model - IV Bolus Plasma {% endblock %}
+{% block script %} <script src="{% static 'js/ocmodelivp.js' %}" charset="utf-8"></script> {% endblock %}
+
+{% block individual-parameters %}
+<div class="box two" id='p-bolus-hidden'>
+                <div class="p-bolus-parameters">
+                    <div class="param p1">
+                        <div class="slope">
+                            Slope (m)
+                            <h5 id="dummy_text">Units: hr<sup>-1</sup></h5>
+                            <div class="display_center iv-bolus-slope" id="iv_bolus_slope">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="param p2">
+                        <div class="Ke">
+                            K<sub>E</sub>
+                            <h5>Units: hr<sup>-1</sup></h5>
+                            <div class="display_center" id="iv_bolus_KE">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="param p3">
+                        <div class="thalf">
+                            t<sub>1/2</sub>
+                            <h5>Units : hr</h5>
+                            <div class="display_center" id="iv_bolus_thalf">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="param p4">
+                        <div class="c0">
+                            C<sub>0</sub>
+                            <h5>Units : mg/mL</h5>
+                            <div class="display_center" id="iv_bolus_idc">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="param p5">
+                        <div class="vd">
+                            V <sub>D</sub>
+                            <h5>Units : L</h5>
+                            <div class="display_center" id="iv_bolus_vd">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="param p6">
+                        <div class="cl">
+                            Cl <sub>T</sub>
+                            <h5>Units : mL/min</h5>
+                            <div class="display_center" id="iv_bolus_cl">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="param p7">
+                        <div class="auc">
+                            AUC
+                            <h5>Units : (mg x min) / mL</h5>
+                            <div class="display_center" id="iv_bolus_auc">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="param p8">
+                        <div class="aumc">
+                            AUMC
+                            <h5>Units : (mg x min<sup>2</sup>) / mL</h5>
+                            <div class="display_center" id="iv_bolus_aumc">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="param p9">
+                        <div class="mrt">
+                            MRT
+                            <h5>Units: hr</h5>
+                            <div class="display_center" id="iv_bolus_mrt">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="param bolus-graph">
+                        <div class="log-graph">
+                            Graph
+                            <div id="Graph1">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
